@@ -1,0 +1,13 @@
+<suite name="SampleSuite">
+
+    <test name="LearningJenkins">
+
+        <classes>
+
+            <class name="com.example.demo.service.serviceImp.UserServiceImpTest"></class>
+
+        </classes>
+
+    </test>
+
+</suite>
