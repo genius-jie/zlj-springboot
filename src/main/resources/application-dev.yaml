@@ -5,15 +5,21 @@ spring:
     datasource:
         username: root
         password: root
-        url: jdbc:mysql://localhost:3306/uyun_udap?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+        url: jdbc:mysql://localhost:3306/uyun_udap?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&useSSL=true
         driver-class-name: com.mysql.cj.jdbc.Driver
 
-mybatis:
-    mapper-locations: classpath:mapping/*.xml
-    type-aliases-package: com.example.demo.bean
+#mybatis:
+#    mapper-locations: classpath:mapping/*.xml
+#    type-aliases-package: com.example.demo.bean
 #showSql
-logging:
-    level:
-        com:
-            example:
-                mapper : debug
+#logging:
+#    level:
+#        com.example.mapper: debug
+
+#mybatis日志
+mybatis-plus:
+    global-config:
+        db-config:
+            id-type: auto
+    configuration:
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
