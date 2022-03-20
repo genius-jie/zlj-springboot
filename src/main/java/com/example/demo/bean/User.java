@@ -19,4 +19,7 @@ public class User {
     @Version//zlj:需要更新的数据必须先查询出来再更新，自己新创建的bean传入去更新是无效的
     @TableField(fill = FieldFill.INSERT)
     private Integer version;
+    @TableLogic
+    @TableField(fill = FieldFill.INSERT)
+    private Integer deleted;
 }
